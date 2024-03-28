@@ -69,4 +69,4 @@ class DBStorage:
         Session = scoped_session(session_factory)
         self.__session = Session()
 
-    storage = DBStorage()
+
