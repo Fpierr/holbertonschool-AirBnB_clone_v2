@@ -27,6 +27,12 @@ class DBStorage:
     def all(self, cls=None):
         """Query on the current database session"""
         from models import base_model
+        from models.amenity import Amenity
+        from models.city import City
+        from models.place import Place
+        from models.review import Review
+        from models.user import User
+        from models.state import State
         objects = {}
         if cls:
             query = self.__session.query(cls).all()
