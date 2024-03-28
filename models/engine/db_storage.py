@@ -80,6 +80,10 @@ class DBStorage():
         Session = scoped_session(session_factory)
         self.__session = Session()
 
+<<<<<<< HEAD
     def close(self):
         """remove method: remove the session"""
         self.__session.close()
+=======
+
+>>>>>>> origin/master
