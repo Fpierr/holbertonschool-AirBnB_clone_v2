@@ -1,6 +1,6 @@
-
 #!/usr/bin/python3
 """state class inherit in base and base model"""
+
 from models.base_model import BaseModel, Base
 from models.city import City
 from models import storage
