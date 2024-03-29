@@ -2,15 +2,9 @@
 """ State Module for HBNB project """
 
 import os
-from models.base_model import Base
 from sqlalchemy.orm import relationship
-from models.base_model import BaseModel
 from sqlalchemy import Column, String, ForeignKey
-from models.city import City
-
-if os.getenv("HBNB_TYPE_STORAGE") != "db":
-    from models import storage
-
+from models.base_model import BaseModel
 
 class State(BaseModel):
     """ State class """
