@@ -4,6 +4,7 @@ import uuid
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
+from os import getenv
 
 Base = declarative_base()
 
@@ -12,8 +13,8 @@ class BaseModel:
     """A base class for all hbnb models"""
 
     id = Column(String(60), primary_key=True, nullable=False)
-    created_at = Column(DateTime, nullable=False, default=datetime.utcnow)
-    updated_at = Column(DateTime, nullable=False, default=datetime.utcnow)
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow())
+    updated_at = Column(DateTime, nullable=False, default=datetime.utcnow())
 
     def __init__(self, *args, **kwargs):
         """Instatntiates a new model"""
@@ -26,19 +27,19 @@ class BaseModel:
             for key, value in kwargs.items():
                 if key != '__class__':
                     setattr(self, key, value)
-            
+
             if "id" not in kwargs:
                 self.id = str(uuid.uuid4())
             if 'created_at' not in kwargs:
                 self.created_at = datetime.now()
             else:
                 self.created_at = datetime.strptime(
-                        kwargs['created_at'], '%Y-%m-%dT%H:%M:%S.%f')
+                    kwargs['created_at'], '%Y-%m-%dT%H:%M:%S.%f')
             if 'updated_at' not in kwargs:
                 self.updated_at = datetime.now()
             else:
-                self.updated_at =  datetime.strptime(
-                        kwargs['updated_at'], '%Y-%m-%dT%H:%M:%S.%f')
+                self.updated_at = datetime.strptime(
+                    kwargs['updated_at'], '%Y-%m-%dT%H:%M:%S.%f')
 
     def __str__(self):
         """Returns a string representation of the instance"""
@@ -57,7 +58,7 @@ class BaseModel:
         dictionary = {}
         dictionary.update(self.__dict__)
         dictionary.update({'__class__':
-                          (str(type(self)).split('.')[-1]).split('\'')[0]})
+                           (str(type(self)).split('.')[-1]).split('\'')[0]})
         dictionary['created_at'] = self.created_at.isoformat()
         dictionary['updated_at'] = self.updated_at.isoformat()
         if "_sa_instance_state" in dictionary.keys():
@@ -67,4 +68,4 @@ class BaseModel:
     def delete(self):
         """delete the current instance from storage"""
         from models import storage
-        storage.delete()
+        models.storage.delete()
