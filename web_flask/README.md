@@ -7,17 +7,17 @@ This project aims to create a clone of AirBnB, an online platform that enables u
 ##  Resources
 Read or watch:
 
-[What is a Web Framework?](https://intranet.hbtn.io/rltoken/qk3bO45DSY-P4qmdnEX93w)
-[A Minimal Application](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application)
-[Routing (except “HTTP Methods”)](https://flask.palletsprojects.com/en/2.2.x/quickstart/#routing)
-[Rendering Templates](https://flask.palletsprojects.com/en/2.2.x/quickstart/#rendering-templates)
-[Synopsis](https://jinja.palletsprojects.com/en/3.0.x/templates/#synopsis)
-[Variables](https://jinja.palletsprojects.com/en/3.0.x/templates/#variables)
-[Comments](https://jinja.palletsprojects.com/en/3.0.x/templates/#comments)
-[Whitespace Control](https://jinja.palletsprojects.com/en/3.0.x/templates/#whitespace-control)
-[List of Control Structures (read up to “Call”)](https://jinja.palletsprojects.com/en/3.0.x/templates/#list-of-control-structures)
-[Flask](https://palletsprojects.com/p/flask/)
-[Jinja](https://jinja.palletsprojects.com/en/3.0.x/templates/)
+- [What is a Web Framework?](https://intranet.hbtn.io/rltoken/qk3bO45DSY-P4qmdnEX93w)
+- [A Minimal Application](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application)
+- [Routing (except “HTTP Methods”)](https://flask.palletsprojects.com/en/2.2.x/quickstart/#routing)
+- [Rendering Templates](https://flask.palletsprojects.com/en/2.2.x/quickstart/#rendering-templates)
+- [Synopsis](https://jinja.palletsprojects.com/en/3.0.x/templates/#synopsis)
+- [Variables](https://jinja.palletsprojects.com/en/3.0.x/templates/#variables)
+- [Comments](https://jinja.palletsprojects.com/en/3.0.x/templates/#comments)
+- [Whitespace Control](https://jinja.palletsprojects.com/en/3.0.x/templates/#whitespace-control)
+- [List of Control Structures (read up to “Call”)](https://jinja.palletsprojects.com/en/3.0.x/templates/#list-of-control-structures)
+- [Flask](https://palletsprojects.com/p/flask/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/templates/)
 
 ## Features
 - Web Framework: Built with Flask, a lightweight web framework for Python.
