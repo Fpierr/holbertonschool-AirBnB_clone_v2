@@ -68,5 +68,5 @@ class DBStorage:
         """
         Calls remove method on the private session attribute or close()
         """
-        self.reload()
-        self.__session.close()
+        if self.__session:
+            self.__session.remove()
