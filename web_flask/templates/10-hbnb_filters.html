@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<HTML LANG="en">
+<HEAD>
+    <META CHARSET="utf-8">
+    <META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=edge">
+    <META NAME="viewport" CONTENT="width=device-width,initial-scale=1.0">
+    <LINK REL="icon" HREF="{{ url_for('static', filename='images/icon.png') }}">
+    <TITLE>AirBnB Clone</TITLE>
+    <LINK REL="stylesheet" HREF="{{ url_for('static', filename='styles/4-common.css') }}">
+    <LINK REL="stylesheet" HREF="{{ url_for('static', filename='styles/3-header.css') }}">
+    <LINK REL="stylesheet" HREF="{{ url_for('static', filename='styles/3-footer.css') }}">
+    <LINK REL="stylesheet" HREF="{{ url_for('static', filename='styles/6-filters.css') }}">
+</HEAD>
+<BODY>
+    <HEADER>
+        <A HREF="/hbnb_filters"></A>
+    </HEADER>
+    <DIV CLASS="container">
+        <SECTION CLASS="filters">
+            <DIV CLASS="locations">
+                <H3>States</H3>
+                <H4>&nbsp;</H4>
+                <DIV CLASS="popover">
+                    <UL>
+                        {% FOR state IN states %}
+                        <LI>
+                            <H2>{{ state.name }}</H2>
+                            <UL>
+                                {% FOR city IN state.cities %}
+                                <LI>{{ city.name }}</LI>
+                                {% ENDFOR %}
+                            </UL>
+                        </LI>
+                        {% ENDFOR %}
+                    </UL>
+                </DIV>
+            </DIV>
+            <DIV CLASS="amenities">
+                <H3>Amenities</H3>
+                <H4>&nbsp;</H4>
+                <DIV CLASS="popover">
+                    <UL>
+                        {% FOR amenity IN amenities %}
+                        <LI>{{ amenity.name }}</LI>
+                        {% ENDFOR %}
+                    </UL>
+                </DIV>
+            </DIV>
+            <BUTTON>Search</BUTTON>
+        </SECTION>
+    </DIV>
+    <FOOTER>
+        Holberton School
+    </FOOTER>
+</BODY>
+</HTML>
